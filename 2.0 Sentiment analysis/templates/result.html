@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="nlp.jpg" rel="icon">
+        <link href="nlp.jpg" rel="apple-touch-icon">
+      
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>N L P</title>
+        <style>
+            .fixed-footer{
+                width: 100%;
+                text-align: center;
+                position: fixed;
+                padding: 50px 0;
+                color: black;
+                
+            }
+        
+            .fixed-footer{
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body >
+        <div class="d-flex align-items-center light-blue-gradient" style="height: 100vh;">
+        
+            <div class="container" >
+                <div class="d-flex justify-content-center">
+                    <img src="{{ax}}" ,width="500" height="400">
+                    <div class="col-md-6">
+                        <div class="card rounded-0 shadow">
+                            <div class="card-body">
+                                Natural language process take following steps:<br>
+                                <ol>
+                                    <li><b>Your Sentence:</b> <br>{{review}}</li>
+                                    <li><b>Removing special charecter:</b> <br>{{text}}</li>
+                                    <li><b>Lowering all words:</b> <br>{{text_lower}}</li>
+                                    <li><b>Lemmatization<br> 
+                                        It usually refers to remove inflectional endings only 
+                                        and to return the base: </b><br>{{clean_text}}</li>
+                                    <li><b>Making Corpus:</b> <br>{{corpus}}</li>
+                                    <li><b>Making Bag of words:</b> <br>{{x}}</li>
+                                    <li><b>Finally prediction:</b> <br>{{output}}</li>
+                                </ol>
+                                <form action="{{ url_for('Home')}}" method="GET">
+                                    
+                                  <button type="submit"  class="btn btn-primary">Test More</button>
+                                </form>
+                                <small>Note- The results may not be 100% true.</small>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="fixed-footer">
+            <div class="container" style="font-family: Times New Roman"><b>Created by <a href="https://www.linkedin.com/in/gaurav-singh-b90369191/">Gaurav Singh</a></b><div>        
+        </div>
+
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            </div>
+    </body>
+</html>

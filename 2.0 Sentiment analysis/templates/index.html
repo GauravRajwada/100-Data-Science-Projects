@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="nlp.jpg" rel="icon">
+        <link href="nlp.jpg" rel="apple-touch-icon">
+      
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>N L P</title>
+        <style>
+            .fixed-footer{
+                width: 100%;
+                text-align: center;
+                position: fixed;
+                padding: 50px 0;
+                color: black;
+                
+            }
+        
+            .fixed-footer{
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body >
+        
+        <div class="d-flex align-items-center light-blue-gradient" style="height: 100vh;">
+            <div class="container" >                
+                <h2 style="text-align: center; font-family: Poppins;font-weight: 400; padding-top: 0%;">Natural Language Processing</h2>
+                Welcome to my NLP project. Here you can enter any sentence and 
+                it will tell what is the sentiment of that text. 
+                You can to learn some basic of natural language processing.<br><br>
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card rounded-0 shadow">
+                            <div class="card-body">
+                                <h3>Give Input</h3>
+                                <form action="{{ url_for('predict')}}" method="post">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Enter the text and get the sentiment of that sentence with every steps </label><br>
+                                        <!-- <small id="emailHelp" class="form-text text-muted">* Enter year only in form "YYYY"</small> -->
+
+                                        <input type="text" class="form-control" id="exampleInputEmail1" name="review" aria-describedby="emailHelp" placeholder="Type here" required>
+                                        
+                                    </div>
+                                  <button type="submit" class="btn btn-primary">Search</button>
+                                </form><br>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed-footer">
+                <div class="container" style="font-family: Times New Roman"><b>Created by <a href="https://www.linkedin.com/in/gaurav-singh-b90369191/">Gaurav Singh</a></b><div>        
+            </div>
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            </div>
+    </body>
+</html>
