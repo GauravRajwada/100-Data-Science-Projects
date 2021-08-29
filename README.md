@@ -1,5 +1,5 @@
 # 100-Data-Science-Projects
-100 machine learning projects for anybody who is interested in doing research and want to learn about data science ibybuilding projects and coding. 
+100 Data Science projects for anybody who is interested in doing research and want to learn about data science by building projects and coding them. 
 
 The goal is to make a repository where anyone can contribute their research,projects and solution that is useful for everyone and can help in their journey of learning Data Science.
 
